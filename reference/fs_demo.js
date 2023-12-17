@@ -32,9 +32,24 @@ const path = require('path')
 // })
 
 //Rename a file 
-fs.rename(path.join(__dirname, '/test', 'hello.txt'), path.join(__dirname, '/test', 'renamed.txt') , (err, data) => {
-    if(err) throw err;
-    console.log("file REnamed");
-})
+// fs.rename(path.join(__dirname, '/test', 'hello.txt'), path.join(__dirname, '/test', 'renamed.txt') , (err, data) => {
+//     if(err) throw err;
+//     console.log("file REnamed");
+// })
 
 
+const filePath = path.join(__dirname, 'os_demo.js');
+
+fs.open(filePath, 'w', (err, fd) => {
+    if (err) throw err;
+    
+    console.log("File is created");
+    
+    // Now you can do further operations with the file using the file descriptor (fd)
+    
+    // Don't forget to close the file when you are done with it
+    fs.close(fd, (err) => {
+        if (err) throw err;
+        console.log("File is closed");
+    });
+});
