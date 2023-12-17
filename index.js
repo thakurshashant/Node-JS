@@ -1,5 +1,7 @@
-const Person = require('./person.js') //commmom js
+const Logger = require('./logger.js')
 
-const person1 = new Person('shashant thakur',30)
+const logger = new Logger();
 
-person1.greeting()
+logger.on('message' ,data => console.log('called Listener' , data))
+
+logger.log('Hello World');

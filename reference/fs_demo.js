@@ -38,7 +38,7 @@ const path = require('path')
 // })
 
 
-const filePath = path.join(__dirname, 'url_demo.js');
+const filePath = path.join(__dirname, 'event_demo.js');
 
 fs.open(filePath, 'w', (err, fd) => {
     if (err) throw err;
