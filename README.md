@@ -1,4 +1,4 @@
-# Node.js Web Server Project
+# Node.js 
 
 This Node.js project illustrates the creation of a basic web server and loading some basic web pages , 
 using the built-in `http` module and explores the usage of other essential modules like `url`, `path`, `fs`, and `os`. The project provides examples of both asynchronous and synchronous operations.
